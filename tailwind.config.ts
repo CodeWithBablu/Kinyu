@@ -1,11 +1,12 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       gridTemplateColumns: {
-        'auto-fit': 'repeat(auto-fit, minmax(300px, 1fr))',
+        // 'auto-fit': 'repeat(auto-fit, minmax(300px, 1fr))',
+        '13': 'repeat(13, minmax(0, 1fr))',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -16,6 +17,13 @@ const config: Config = {
         poppins: ['var(--font-poppins)'],
         comfortaa: ['var(--font-comfortaa)'],
         caveat: ['var(--font-caveat)'],
+      },
+    },
+    keyframes: {
+      shimmer: {
+        '100%': {
+          transform: 'translateX(100%)',
+        },
       },
     },
   },

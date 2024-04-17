@@ -1,4 +1,4 @@
-import '@/app/ui/styles/globals.css';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Poppins, Comfortaa, Caveat } from 'next/font/google';
 

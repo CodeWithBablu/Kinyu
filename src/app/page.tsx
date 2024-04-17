@@ -38,8 +38,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="absolute left-0 top-0 z-0 h-60 w-60 rounded-full bg-gradient-radial from-pink-900/60 blur-2xl md:h-72 md:w-72"></div>
-            <div className="absolute bottom-0 right-0 z-0 h-60 w-60 rounded-full bg-gradient-radial from-indigo-800/60 blur-2xl md:h-72 md:w-72"></div>
+            <div className="absolute top-0 left-0 -translate-y-1/2 z-0 h-60 w-60 rounded-full bg-gradient-radial from-teal-900/60 blur-2xl md:h-80 md:w-80"></div>
+            <div className="absolute bottom-0 right-0 translate-y-1/2 z-0 h-60 w-60 rounded-full bg-gradient-radial from-indigo-800/60 blur-2xl md:h-80 md:w-80"></div>
           </div>
         </div>
 
