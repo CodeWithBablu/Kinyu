@@ -16,12 +16,12 @@ export default async function InvoicesTable({
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
-        <div className="rounded-xl bg-zinc-700/60 p-2">
+        <div className="rounded-xl sm:bg-zinc-700/60 p-0 sm:p-2">
           <div className="xl:hidden">
             {invoices?.map((invoice) => (
               <div
                 key={invoice.id}
-                className="mb-2 w-full rounded-xl bg-zinc-900 p-2 shadow-xl shadow-blue-800/30"
+                className="mb-2 w-full rounded-xl bg-zinc-900 p-2 shadow-md shadow-blue-800/30 border border-gray-600"
               >
                 <div className="flex items-center justify-between border-b border-gray-500 pb-4">
                   <div>
@@ -39,7 +39,7 @@ export default async function InvoicesTable({
                   </div>
                   <InvoiceStatus status={invoice.status} />
                 </div>
-                <div className="flex w-full text-indigo-500 items-center justify-between pt-4">
+                <div className="flex w-full text-gray-400 items-center justify-between pt-4">
                   <div>
                     <p className="text-xl font-medium">
                       {formatCurrency(invoice.amount)}
