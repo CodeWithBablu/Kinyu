@@ -42,13 +42,13 @@ export default function NavLinks() {
             className={clsx(
               'flex h-[50px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3',
               {
-                'bg-blue-600 shadow-xl shadow-indigo-600/60 text-gray-100':
+                'bg-blue-600 text-gray-100 shadow-xl shadow-indigo-600/60':
                   path === link.href,
               },
               {
-                'hover:bg-gradient-to-r hover:from-gray-600/50 text-gray-300 hover:text-gray-100':
-                  path !== link.href
-              }
+                'text-gray-300 hover:bg-gradient-to-r hover:from-gray-600/50 hover:text-gray-100':
+                  path !== link.href,
+              },
             )}
           >
             <LinkIcon className="w-5" />

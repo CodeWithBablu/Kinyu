@@ -31,7 +31,9 @@ export function CardsSkeleton() {
 
 export function RevenueChartSkeleton() {
   return (
-    <div className={`${shimmer} relative w-full overflow-hidden md:col-span-4 bg-zinc-800/60 p-2 rounded-xl`}>
+    <div
+      className={`${shimmer} relative w-full overflow-hidden rounded-xl bg-zinc-800/60 p-2 md:col-span-4`}
+    >
       <div className="mb-4 h-8 w-36 rounded-md bg-zinc-700/60" />
       <div className="rounded-xl bg-zinc-700/60 p-4">
         <div className="mt-0 grid h-[400px] grid-cols-12 items-end gap-2 rounded-md bg-zinc-800 p-4 sm:grid-cols-13 md:gap-4" />
@@ -46,7 +48,7 @@ export function RevenueChartSkeleton() {
 
 export function InvoiceSkeleton() {
   return (
-    <div className="flex flex-row items-center justify-between bg-zinc-800 py-3 mb-1 px-2 rounded-md">
+    <div className="mb-1 flex flex-row items-center justify-between rounded-md bg-zinc-800 px-2 py-3">
       <div className="flex items-center">
         <div className="mr-2 h-8 w-8 rounded-full bg-zinc-700/60" />
         <div className="min-w-0">
@@ -62,7 +64,7 @@ export function InvoiceSkeleton() {
 export function LatestInvoicesSkeleton() {
   return (
     <div
-      className={`${shimmer} relative flex w-full flex-col overflow-hidden md:col-span-4 bg-zinc-800/60 p-2 rounded-xl`}
+      className={`${shimmer} relative flex w-full flex-col overflow-hidden rounded-xl bg-zinc-800/60 p-2 md:col-span-4`}
     >
       <div className="mb-4 h-8 w-36 rounded-md bg-zinc-700/60" />
       <div className="flex grow flex-col justify-between rounded-xl bg-zinc-700/60 p-4">

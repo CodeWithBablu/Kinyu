@@ -1,13 +1,17 @@
-import { fetchRevenue } from "@/lib/data";
-import RevenueChart from "@/components/ui/dashboard/revenue-chart";
-import LatestInvoices from "@/components/ui/dashboard/latest-invoices";
-import CardWrapper from "@/components/ui/dashboard/cards";
-import { Suspense } from "react";
-import { CardsSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from "@/components/ui/skeletons";
+import { fetchRevenue } from '@/lib/data';
+import RevenueChart from '@/components/ui/dashboard/revenue-chart';
+import LatestInvoices from '@/components/ui/dashboard/latest-invoices';
+import CardWrapper from '@/components/ui/dashboard/cards';
+import { Suspense } from 'react';
+import {
+  CardsSkeleton,
+  LatestInvoicesSkeleton,
+  RevenueChartSkeleton,
+} from '@/components/ui/skeletons';
 
 export default async function DashBoard() {
-
-  {/*NOTE:
+  {
+    /*NOTE:
   Where you place your Suspense boundaries will depend on a few things:
 
     1.How you want the user to experience the page as it streams.
@@ -21,11 +25,12 @@ export default async function DashBoard() {
   -Where you place your suspense boundaries will vary depending on your application. In general, 
     it's good practice to move your data fetches down to the components that need it, and then wrap those components in Suspense. 
   -But there is nothing wrong with streaming the sections or the whole page if that's what your application needs.
-*/}
+*/
+  }
 
   return (
     <main className="w-full">
-      <h1 className=" mb-3 font-poppins font-medium text-2xl">Dashboard</h1>
+      <h1 className=" mb-3 font-poppins text-2xl font-medium">Dashboard</h1>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {/*NOTE: 
@@ -49,5 +54,5 @@ export default async function DashBoard() {
         </Suspense>
       </div>
     </main>
-  )
+  );
 }

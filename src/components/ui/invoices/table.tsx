@@ -16,12 +16,12 @@ export default async function InvoicesTable({
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
-        <div className="rounded-xl sm:bg-zinc-700/60 p-0 sm:p-2">
+        <div className="rounded-xl p-0 sm:bg-zinc-700/60 sm:p-2">
           <div className="xl:hidden">
             {invoices?.map((invoice) => (
               <div
                 key={invoice.id}
-                className="mb-2 w-full rounded-xl bg-zinc-900 p-2 shadow-md shadow-blue-800/30 border border-gray-600"
+                className="mb-2 w-full rounded-xl border border-gray-600 bg-zinc-900 p-2 shadow-md shadow-blue-800/30"
               >
                 <div className="flex items-center justify-between border-b border-gray-500 pb-4">
                   <div>
@@ -33,13 +33,13 @@ export default async function InvoicesTable({
                         height={28}
                         alt={`${invoice.name}'s profile picture`}
                       />
-                      <p className=' text-gray-100'>{invoice.name}</p>
+                      <p className=" text-gray-100">{invoice.name}</p>
                     </div>
                     <p className="text-sm text-gray-300/80">{invoice.email}</p>
                   </div>
                   <InvoiceStatus status={invoice.status} />
                 </div>
-                <div className="flex w-full text-gray-400 items-center justify-between pt-4">
+                <div className="flex w-full items-center justify-between pt-4 text-gray-400">
                   <div>
                     <p className="text-xl font-medium">
                       {formatCurrency(invoice.amount)}
@@ -55,8 +55,7 @@ export default async function InvoicesTable({
             ))}
           </div>
 
-
-          <table className="hidden min-w-full rounded-xl text-gray-100 xl:table table-auto bg-zinc-900">
+          <table className="hidden min-w-full table-auto rounded-xl bg-zinc-900 text-gray-100 xl:table">
             <thead className="rounded-lg text-left text-sm font-normal">
               <tr>
                 <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
@@ -83,7 +82,7 @@ export default async function InvoicesTable({
               {invoices?.map((invoice) => (
                 <tr
                   key={invoice.id}
-                  className="w-full border-b py-3 text-sm border-b-gray-600 last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
+                  className="w-full border-b border-b-gray-600 py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
                 >
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex items-center gap-3">

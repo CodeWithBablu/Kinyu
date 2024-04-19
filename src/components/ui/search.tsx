@@ -1,11 +1,10 @@
-"use client"
+'use client';
 
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 
 export default function Search({ placeholder }: { placeholder: string }) {
-
   /*
   NOTE:  There are a couple of benefits of implementing search with URL params:
 
@@ -30,18 +29,25 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }, 500);
 
   return (
-    <div className="flex flex-1 items-center flex-shrink-0">
-      <label htmlFor="search" className="hidden md:block font-comfortaa font-semibold text-lg mr-5">Search</label>
+    <div className="flex flex-1 flex-shrink-0 items-center">
+      <label
+        htmlFor="search"
+        className="mr-5 hidden font-comfortaa text-lg font-semibold md:block"
+      >
+        Search
+      </label>
 
       <div className="relative flex w-full">
         <input
           id="search"
           onChange={(e) => handleSearch(e.target.value)}
           defaultValue={searchParams.get('query')?.toString()}
-          className="relative peer block w-full md:w-64 lg:w-80 rounded-e-md py-[15px] pl-10 text-sm outline-none text-gray-200 bg-zinc-700/30 border-2 border-gray-600/60 focus:border-blue-600 placeholder:text-gray-300 rounded-md" placeholder={placeholder} type="text" />
+          className="peer relative block w-full rounded-md rounded-e-md border-2 border-gray-600/60 bg-zinc-700/30 py-[15px] pl-10 text-sm text-gray-200 outline-none placeholder:text-gray-300 focus:border-blue-600 md:w-64 lg:w-80"
+          placeholder={placeholder}
+          type="text"
+        />
 
-        <MagnifyingGlassIcon className="absolute left-2 top-1/2 -translate-y-1/2 h-5 w-5 peer-focus:text-gray-200" />
-
+        <MagnifyingGlassIcon className="absolute left-2 top-1/2 h-5 w-5 -translate-y-1/2 peer-focus:text-gray-200" />
       </div>
     </div>
   );

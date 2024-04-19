@@ -1,13 +1,11 @@
-import { fetchRevenue } from "@/lib/data";
-import { Revenue } from "@/lib/definitions";
-import { generateYAxis } from "@/lib/utils";
-import { CalendarIcon } from "@heroicons/react/24/outline";
+import { fetchRevenue } from '@/lib/data';
+import { Revenue } from '@/lib/definitions';
+import { generateYAxis } from '@/lib/utils';
+import { CalendarIcon } from '@heroicons/react/24/outline';
 
 export default async function RevenueChart() {
-
   const chartHeight = 350;
   const revenue = await fetchRevenue();
-
 
   const { yAxisLabels, topLabel } = generateYAxis(revenue);
 
@@ -16,53 +14,54 @@ export default async function RevenueChart() {
   }
 
   return (
-    <div className="md:col-span-4 h-full flex flex-col justify-between">
-
-      <h1 className="mb-4 text-gray-200 font-caveat font-semibold text-3xl">Recent Revenue</h1>
+    <div className="flex h-full flex-col justify-between md:col-span-4">
+      <h1 className="mb-4 font-caveat text-3xl font-semibold text-gray-200">
+        Recent Revenue
+      </h1>
 
       {/* chart container */}
-      <div className=" bg-zinc-800/60 p-2 rounded-lg flex flex-col grow justify-between">
-
-        <div className='sm:grid-cols-13 grid grid-cols-12 items-end h-full mt-0 gap-2 rounded-md bg-zinc-900 p-2 md:gap-3'>
-
-          <div className={` mb-6 hidden sm:flex flex-col justify-between text-gray-400 text-xs font-semibold font-comfortaa`}
-            style={{ height: `${chartHeight}px` }}>
+      <div className=" flex grow flex-col justify-between rounded-lg bg-zinc-800/60 p-2">
+        <div className="mt-0 grid h-full grid-cols-12 items-end gap-2 rounded-md bg-zinc-900 p-2 sm:grid-cols-13 md:gap-3">
+          <div
+            className={` mb-6 hidden flex-col justify-between font-comfortaa text-xs font-semibold text-gray-400 sm:flex`}
+            style={{ height: `${chartHeight}px` }}
+          >
             {yAxisLabels.map((label) => (
               <p key={label}>{label}</p>
             ))}
           </div>
 
-          {
-            revenue.map((month) => (
-              <div key={month.month} className="flex flex-col items-center gap-2">
+          {revenue.map((month) => (
+            <div key={month.month} className="flex flex-col items-center gap-2">
+              <div
+                className={` w-full rounded-md bg-blue-600`}
+                style={{
+                  height: `${(chartHeight / topLabel) * month.revenue}px`,
+                }}
+              ></div>
 
-                <div className={` w-full rounded-md bg-blue-600`}
-                  style={{ height: `${(chartHeight / topLabel) * month.revenue}px` }}
-                ></div>
-
-                <p className=" h-6 -rotate-90 sm:rotate-0 text-xs text-gray-400">{month.month}</p>
-
-              </div>
-            ))
-          }
-
+              <p className=" h-6 -rotate-90 text-xs text-gray-400 sm:rotate-0">
+                {month.month}
+              </p>
+            </div>
+          ))}
         </div>
-
       </div>
 
-      <div className="flex items-center h-10 font-medium">
+      <div className="flex h-10 items-center font-medium">
         <CalendarIcon className="h-5 w-5 text-gray-500" />
         <h3 className="ml-2 text-sm text-gray-500 ">Last 12 months</h3>
       </div>
-
     </div>
   );
 }
 
+{
+  /* NOTE: comment in this code when you get to this point in the course */
+}
 
-{/* NOTE: comment in this code when you get to this point in the course */ }
-
-{/* <div className="rounded-xl bg-gray-50 p-4">
+{
+  /* <div className="rounded-xl bg-gray-50 p-4">
         <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md bg-white p-4 md:gap-4">
           <div
             className="mb-6 hidden flex-col justify-between text-sm text-gray-400 sm:flex"
@@ -91,4 +90,5 @@ export default async function RevenueChart() {
           <CalendarIcon className="h-5 w-5 text-gray-500" />
           <h3 className="ml-2 text-sm text-gray-500 ">Last 12 months</h3>
         </div>
-      </div> */}
+      </div> */
+}

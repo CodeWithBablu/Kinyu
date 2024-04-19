@@ -21,8 +21,8 @@ export async function fetchRevenue() {
     // Artificially delay a response for learning purposes.
     //NOTE: need to remove this during Deployment :)
 
-    console.log('Fetching revenue data...');
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // console.log('Fetching revenue data...');
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
@@ -59,7 +59,7 @@ export async function fetchCardData() {
   noStore();
 
   // Artificially delay a response for learning purposes.
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   try {
     //NOTE: I can probably combine these into a single SQL query

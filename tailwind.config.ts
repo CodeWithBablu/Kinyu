@@ -25,6 +25,10 @@ const config: Config = {
           transform: 'translateX(100%)',
         },
       },
+      fadeIn: {
+        '0%': { transform: 'translateY(-50%)', opacity: '0' },
+        '100%': { transform: 'translateY(0%)', opacity: '1' }
+      }
     },
   },
   plugins: [],

@@ -13,7 +13,7 @@ export default function DashBoardLayout({
         <Sidenav />
       </div>
 
-      <div className='p-6 w-full'>{children}</div>
+      <div className="w-full p-6">{children}</div>
     </div>
   );
 }
