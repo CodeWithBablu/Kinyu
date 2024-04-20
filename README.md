@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 id="title" align="center">Kinyu Dashboard</h1>
 
-## Getting Started
+<p id="description">A Financial dashboard</p>
 
-First, run the development server:
+<h2>🚀 Demo</h2>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<b>[Live Demo](https://kinyu.vercel.app/)</b>
+
+<h2> Demo of my litle venture ==> have a look 🧐 </h2>
+
+https://github.com/CodeWithBablu/Kinyu/assets/59352323/0391e26c-85c7-4ec8-ae6d-e884fd295f00
+
+<h2>A Glimpse Behind the Curtain :</h2>
+
+<br><br><b>Home</b><br><br>
+
+![home_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/573c5e57-c08b-418c-8ae7-1d413c807a27)
+
+<br><br><b> Sign-in Page </b><br><br>
+
+![login_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/45dcafed-f572-4024-9b0c-83a40045debf)
+
+<br><br><b> Dashboard Page </b><br><br>
+
+![dashboard_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/a090f77e-3b35-4982-a5c3-c0488d43952c)
+
+<br><br><b> Invoices Page </b><br><br>
+
+![invoices_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/f998d81f-0c11-4bd7-948a-2a6866be26f8)
+
+<br><br><b> Query Invoices </b><br><br>
+
+![invoices_with_query_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/c1e58a80-5184-465c-bcdb-d700c619d06e)
+
+<br><br><b> Create invoice Page </b><br><br>
+
+![create_invoice_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/0bd1510c-1d3c-4d55-b211-6cb97637b0ba)
+
+<br><br><b> Edit invoice Page </b><br><br>
+
+![edit_invoice_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/4fe78580-3ee4-49fd-ba7d-901fae8ddb3d)
+
+<br><br><b> Customers Page </b><br><br>
+
+![customers_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/e361b39d-896f-4c97-b433-87a17a301a0d)
+
+<br><br><b> Error Page: to look back to your deeds  </b><br><br>
+
+![error_page](https://github.com/CodeWithBablu/Kinyu/assets/59352323/7edb97e8-d2b3-46fb-ba98-a8e909778edd)
+
+
+
+
+<h2>🧐 Features 😎️</h2>
+
+Here're some of the project's best features:
+
+- Sign in
+- Sign out
+- The password stored in the db are encrypted
+- next-auth used for authentication
+- dashboard
+- create, edit and delete invoices
+- query through invoices and customers
+- error page to easily rectify error
+- fully responsive.
+- best practices for rendering and security through server actions.
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Get the latest snapshot</p>
+
+```
+git clone https://github.com/CodeWithBablu/Kinyu.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p>2. Install NPM dependencies</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p>3. Then simply start your app</p>
 
-## Learn More
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+**Extra configuration**
+  -  tailwindcss
+  -  for those who don't want to dig in
+  -  .env file setup
+```
+# this all are obtain from vercel plsql storage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# ( i.e When you create new data storage in vercel)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+POSTGRES_URL=
+POSTGRES_PRISMA_URL=
+POSTGRES_URL_NO_SSL=
+POSTGRES_URL_NON_POOLING=
+POSTGRES_USER=
+POSTGRES_HOST=
+POSTGRES_PASSWORD=
+POSTGRES_DATABASE=
 
-## Deploy on Vercel
+# This is used to sign cookies in next-auth
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AUTH_SECRET='Any random string or generate using some random string generator'
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+- NextJS
+- CSS
+- tailwindcss
+- PL-SQL
+- NEXT-AUTH
