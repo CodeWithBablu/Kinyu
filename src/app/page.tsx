@@ -1,5 +1,4 @@
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import { GlobeAltIcon } from '@heroicons/react/20/solid';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,10 +7,9 @@ export default function Home() {
   return (
     <main className=" m-auto max-w-7xl p-6">
       <div className=" grid auto-cols-min grid-flow-row grid-cols-1 gap-10 md:grid-cols-2">
-        <div className="col-span-1 flex h-20 items-end rounded-lg bg-blue-500 p-4 md:col-span-2 md:h-52">
-          <Link href='/' className=" flex items-center gap-5 font-comfortaa text-3xl font-semibold">
-            <GlobeAltIcon className="h-10 w-10" />
-            <h1>Kinyu</h1>
+        <div className="col-span-1 flex h-44 items-end rounded-lg p-4 md:col-span-2 md:h-72">
+          <Link href='/' className=" relative w-[200px] md:w-[300px] h-full gap-5 font-comfortaa text-3xl font-semibold">
+            <Image fill={true} sizes='(max-width: 768px) 300px, 200px' className='' src={'/logo.png'} alt='logo' />
           </Link>
         </div>
 
@@ -46,6 +44,7 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <Image
             unoptimized
+            priority={true}
             src="/dashboard.gif"
             width={400}
             height={400}
