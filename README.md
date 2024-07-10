@@ -4,6 +4,10 @@
 
 <h2>🚀 Demo</h2>
 
+default Test login
+  Email: user@nextmail.com
+  Pass:  123456
+
 <b>[Live Demo](https://kinyu.vercel.app/)</b>
 
 <h2> Demo of my litle venture ==> have a look 🧐 </h2>
