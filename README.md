@@ -4,9 +4,9 @@
 
 <h2>🚀 Demo</h2>
 
-default Test login
-  Email: user@nextmail.com
-  Pass:  123456
+<h2>Default Test login : </h2>
+  <p>Email: user@nextmail.com</p>
+  <p>Pass:  123456</p>
 
 <b>[Live Demo](https://kinyu.vercel.app/)</b>
 
